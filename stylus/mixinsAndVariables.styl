@@ -1,0 +1,87 @@
+
+@charset "UTF-8";
+//----------------------------------------
+//      Mixins
+//----------------------------------------
+
+// @param prop (required)
+// @param value (required)
+// @param vend (optional) - an array that contains prefixes which must be excluded
+//                          if this param is omited all 4 prefixes will be used
+// ex.: prefs(transition, opacity .3s, -ms- -o-)
+prefs(prop, value, vend = false)
+  venPrefixes = -webkit- -moz- -ms- -o-
+
+  func(prefix, excluders)
+    pass = 0
+    for j in excluders
+      if prefix isnt j
+        pass += 1
+    if pass == length(excluders)
+      return true
+    else
+      return false
+
+  if vend == false
+    -webkit-{prop}: value;
+    -moz-{prop}: value;
+    -ms-{prop}: value;
+    -o-{prop}: value;
+    {prop}: value;
+
+  if vend != false
+    for i in venPrefixes
+      if func(i, vend)
+        {i+prop} value
+      if i == last(venPrefixes)
+        {prop} value
+
+// @param target (required) - means desired font size
+em(target, parent = 14, lh = 1.25)
+  size = target / parent
+  font-size size em
+  line-height lh
+
+// @param target (required) - means desired font size
+unitEM(target, parent = 14)
+  (target / parent)em
+
+// @param fs (optional) - in px
+// @param lh (optional) - num without units
+rem(fs = 14, lh = 1.25)
+  size = fs / 10 // = 14px, because default is set to 62,5% (10px)
+  font-size size rem
+  line-height lh
+
+iebgrgba(num8color)
+  filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#" + num8color + "', EndColorStr='#" + num8color + "')");
+  -ms-filter: \" + unquote(" progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#" + num8color + "', EndColorStr='#" + num8color + "' ") + '"' ;
+  zoom: 1!important;
+
+iebgsize(img, ext)
+  filter: unquote("progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/" + img + "." + ext + "', sizingMethod='scale')");
+  -ms-filter: \" + unquote("progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/" + img + "." + ext + "', sizingMethod='scale')") + '"' ;
+
+ieopacity(opac)
+  filter: unquote(" alpha(opacity=" + opac * 100 + ") ");
+
+vw(inPX, templPX = 1920)
+  (inPX * 100 / templPX)vw
+
+// mixin for easy use of sprite
+setSprite($spriteImg, $urlToSprite)
+  width: $spriteImg[4];
+  height: $spriteImg[5];
+  // example: url('../img/' + $spriteImg[8]);
+  background-image: url($urlToSprite + $spriteImg[8]);
+  background-position: $spriteImg[2] $spriteImg[3];
+
+//----------------------------------------
+//     Global Variables
+//----------------------------------------
+
+baseBlack = #3c3b3c
+// url to img folder for this project
+$urlSpriteGT = '../img/'
+
+@import 'sprites/sprite.styl'

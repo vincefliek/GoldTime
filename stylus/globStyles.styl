@@ -1,0 +1,125 @@
+/*!----------------------------------------
+ *  Globally Applied Styles
+ *----------------------------------------*/
+
+////////////////////////////////////////////
+//
+// Explanations:
+//
+// 1) .GT -- global class (Golden Time)
+// 2) UPPERCASED class' names -- blocks' names
+//
+////////////////////////////////////////////
+
+
+/*! ============ common ============ */
+html
+  font-size: 62.5%;
+
+body
+  color baseBlack
+  font-size 1em
+  line-height 1.25
+  font-family 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-weight 400
+  overflow-x hidden
+  background-color #fff
+
+figure
+  margin 0
+
+
+
+/*! ============ anchor ============ */
+a
+  color baseBlack
+
+a
+a:link
+a:active
+  text-decoration: none;
+
+a:hover
+  color lighten(baseBlack, 40%)
+  cursor pointer
+  text-decoration underline
+
+a:focus
+  outline: none;
+  text-decoration: underline;
+
+a:visited
+  outline: none;
+  color lighten(baseBlack, 40%)
+  text-decoration: underline;
+
+
+
+/*! ============ buttons ============ */
+button:focus
+  outline: none;
+
+.GT__button
+  em(16, 14, 1)
+  margin 10px 0 0
+  padding 20px 30px
+  display inline-block
+  color baseBlack
+  font-weight 500
+  border 2px solid baseBlack
+  text-transform uppercase
+
+  &:hover
+  &:visited
+    border 2px solid lighten(baseBlack, 40%)
+
+  @media (min-width: 768px)
+    margin 3vw 0 0
+    padding vw(20) vw(30)
+    em(14, 14, 1)
+
+
+
+/*! ============ h* and h*-like elements ============ */
+h3
+.h3-like
+  padding 5px 0
+  color baseBlack
+  em(32, 14, 1)
+  font-weight 300
+  text-transform uppercase
+
+  @media (min-width: 768px)
+    padding 4px 0
+    em(20, 14, 1)
+
+h4
+.h4-like
+  padding 5px 0
+  color #919191
+  em(24, 14, 1)
+  font-weight 300
+  font-family "Philosopher", "Open Sans", Arial, sans-serif
+  text-transform uppercase
+
+  @media (min-width: 768px)
+    padding 4px 0
+    em(14, 14, 1)
+  @media (min-width: 992px)
+    padding 10px 0
+
+
+
+/*! ============ space around ============ */
+.margins-off
+  margin 0
+
+.paddings-off
+  padding 0
+
+.gutter-off
+  padding-left 0
+  padding-right 0
+
+.container-padding
+  padding 0 vw(175)

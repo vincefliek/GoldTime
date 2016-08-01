@@ -1,0 +1,218 @@
+/*!----------------------------------------
+ *  Main
+ *----------------------------------------*/
+
+/*! ============ slider ============ */
+.SLIDER
+  position relative
+  margin 0 0 20px 0
+  rem(9)
+
+  @media (min-width: 768px)
+    rem(16)
+  @media (min-width: 992px)
+    rem(14)
+  @media (min-width: 1200px)
+    rem(16)
+  @media (min-width: 1500px)
+    rem(18)
+
+  & &__carousel-indicators
+    li
+      margin 1px 8px 0 0
+      width 15px
+      height 15px
+      border 2px solid lighten(baseBlack, 40%)
+      border-radius 0
+      prefs(transform, unquote( "rotate(45deg)" ))
+
+    .active
+      border 2px solid baseBlack
+      background-color transparent
+
+  &__carousel-inner
+    opacity 1
+
+  &__item
+    opacity 1
+
+  &__img
+    margin 0 auto
+
+  & &__carousel-caption
+    position: absolute;
+    top 4vw
+    left: 5%;
+    right: 5%;
+    bottom: 4vw;
+    z-index: 10;
+    padding 0
+    color: baseBlack;
+    text-align: center;
+    text-shadow: none;
+
+    @media (max-width: 767px)
+      top 5%
+      bottom: 5%;
+
+    @media (max-width: 1199px)
+      top 1.5vw
+      bottom: 1.5vw;
+
+  &__carousel-caption-ul
+    margin 5px 0 0 0
+
+    @media (min-width: 1500px)
+      margin 30px 0 0 0
+
+  &__text-h3
+    @media (min-width: 768px)
+      em(28, 14, 1)
+
+  &__text-h4
+    @media (max-width: 767px)
+      em(9, 14, 1)
+
+  &__button
+    @media (max-width: 767px)
+      em(18, 14, 1)
+      margin 3vw 0 0
+      padding vw(20) vw(30)
+
+    @media (max-width: 480px)
+      em(16, 14, 1)
+      margin 1vw 0 0
+
+/*! ============ discount ============ */
+discount_height_px = 200px
+discount_height_vw = vw(311)
+
+.DISCOUNT
+  position relative
+  rem(14)
+
+  @media (min-width: 768px)
+    rem(14)
+  @media (min-width: 992px)
+    rem(18)
+  @media (min-width: 1200px)
+    rem(22)
+  @media (min-width: 1500px)
+    rem(26)
+  @media (min-width: 1750px)
+    rem(30)
+
+  &__direct-row
+    margin 0 -10px
+
+  &__column
+    margin 0 0 20px 0
+    padding 0 10px
+
+  &__disc-text
+    padding-top (discount_height_px * 0.1)
+    height discount_height_px
+    color #fff
+    background-color #e5b45b
+    text-align center
+
+    @media (min-width: 768px)
+      height discount_height_vw
+      padding-top (discount_height_vw * 0.1)
+
+  &__text-h3
+  &__text-h4
+    font-weight 400
+
+  &__text-h3--white
+  &__text-h4--white
+    color #fff
+
+  &__button
+    margin-top 5px
+
+  &__button--white
+    color #fff
+    border 2px solid #fff
+
+    &:hover
+    &:visited
+      color darken(#fff, 20%)
+      border 2px solid darken(#fff, 20%)
+
+  &__disc-picture
+    height discount_height_px
+    background-color #e5b45b
+    background-position center center
+    background-repeat no-repeat
+    background-size cover
+
+    @media (min-width: 768px)
+      height discount_height_vw
+
+  &__bg-img
+    visibility hidden
+
+  &__figcaption
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height discount_height_px
+    padding-top (discount_height_px * 0.1)
+    text-align center
+
+    @media (max-width: 767px)
+      background-color rgba(#fff, .7)
+
+    @media (min-width: 768px)
+      height discount_height_vw
+      padding-top (discount_height_vw * 0.1)
+
+/*! ============ partners ============ */
+.PARTNERS
+  position relative
+  padding-bottom 50px
+  rem(14)
+  text-align center
+
+  @media (min-width: 768px)
+    rem(18)
+  @media (min-width: 992px)
+    rem(18)
+  @media (min-width: 1200px)
+    rem(24)
+  @media (min-width: 1500px)
+    rem(24)
+
+  &__line
+    margin (-13/14)em 0 (14/14)em
+    display block
+    height 2px
+    background-color #8c8c8a
+
+  &__text-h4
+    padding-left 15px
+    padding-right 15px
+    display inline-block
+    color baseBlack
+    font-weight 700
+    background-color #fff
+
+  &__list
+    text-align center
+
+  &__item
+    width 48%
+    display inline-block
+    vertical-align baseline
+    opacity .5
+    ieopacity(0.5)
+    prefs(transition, opacity .3s, -ms-)
+
+    &:hover
+      opacity 1
+      ieopacity(1)
+
+    @media (min-width: 768px)
+      width 14vw

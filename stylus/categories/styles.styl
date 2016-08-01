@@ -1,0 +1,108 @@
+/*!----------------------------------------
+ *  Page categories
+ *----------------------------------------*/
+/*! ============ sidebar ============ */
+.SIDEBAR
+  position relative
+  padding 10px
+  rem(16)
+
+  //@media (min-width: 768px)
+  //  rem(16)
+  //@media (min-width: 992px)
+  //  rem(14)
+  //@media (min-width: 1200px)
+  //  rem(16)
+  //@media (min-width: 1500px)
+  //  rem(18)
+
+.js-sb
+  min-height 400px
+  background-color rgba(#008800, .1)
+
+.js-sb-main
+  z-index 1001
+  width 270px
+  position fixed
+  top 0
+  left -(@width)
+  bottom 0
+  min-height 100%
+  background-color #008800
+  prefs(transition, .3s, -ms-)
+
+.js-sb-visible
+  left 0
+
+.js-sb-bg
+  z-index 1000
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background-color rgba(#fff, .7)
+  iebgrgba('B2FFFFFF')
+
+.js-sidebar-toggle
+  float right
+
+/*! ============ content ============ */
+.PRODUCTS
+  position relative
+  padding 10px
+  rem(16)
+
+  //@media (min-width: 768px)
+  //  rem(16)
+  //@media (min-width: 992px)
+  //  rem(14)
+  //@media (min-width: 1200px)
+  //  rem(16)
+  //@media (min-width: 1500px)
+  //  rem(18)
+
+  &__item
+    position relative
+    display block
+    //prefs(box-shadow, 0 0 8px 0 rgba(0,0,0,0.5), -ms- -o-)
+    &:hover
+      prefs(box-shadow, 0 0 8px 0 rgba(0,0,0,0.5), -ms- -o-)
+
+      .zoo-img
+        display block
+
+  &__col-lg-2_5
+    @media (min-width: 1500px)
+      width 25%
+
+  &__col-md-3_3
+    @media (min-width: 992px) and (max-width: 1499px)
+      width (100/3)%
+
+  &__figure
+    position relative
+    height 366px
+    padding 10px
+    overflow hidden
+
+  &__img-wrapper-table
+    width 100%
+    height 240px
+    display table
+    border-bottom 1px solid #dadada
+
+  &__img-wrapper-cell
+    display table-cell
+    vertical-align middle
+
+  &__img
+    margin 0 auto
+
+  /.zoo-img
+    display none
+    cursor unquote( "url('../img/zoom_cursor.png') 0 0, auto!important" )
+
+
+
+

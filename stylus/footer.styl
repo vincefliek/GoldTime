@@ -1,0 +1,85 @@
+/*!----------------------------------------
+ *  Footer
+ *----------------------------------------*/
+.FOOTER
+  position relative
+  padding 20px 0 30px
+  rem(14)
+  border-top 8px solid #3c3b3c
+
+  @media (min-width: 768px)
+    rem(12)
+  @media (min-width: 992px)
+    rem(13)
+  @media (min-width: 1200px)
+    rem(14)
+  @media (min-width: 1500px)
+    rem(15)
+
+  &__column
+    padding 10px 0 0 0
+    em(16, 14, 1)
+    text-transform uppercase
+
+    @media (min-width: 768px) and (max-width: 991px)
+      height 120px
+
+  &__copyright
+    em(12, 14, 1)
+    text-transform none
+
+    > p
+      padding-bottom 3px
+
+  &__logo
+    padding-bottom 10px
+
+    @media (min-width: 768px) and (max-width: 991px)
+      max-width 150px
+
+  &__list
+    li
+      padding-bottom 15px
+
+    &-item
+      padding-left 30px
+
+      @media (min-width: 768px)
+        padding-bottom 15px
+
+  &__link-img
+    position relative
+    display block
+
+    &:before
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: -5px;
+      display: block;
+      background-repeat no-repeat
+
+    &--contacts:before
+      setSprite($footer_icon1_contacts, $urlSpriteGT)
+
+    &--feedback:before
+      setSprite($footer_icon2_feedback, $urlSpriteGT)
+
+    &--fb:before
+      setSprite($footer_icon3_fb, $urlSpriteGT)
+
+    &--vk:before
+      setSprite($footer_icon4_vk, $urlSpriteGT)
+
+    &--ok:before
+      setSprite($footer_icon5_ok, $urlSpriteGT)
+
+    &--yt:before
+      setSprite($footer_icon6_yt, $urlSpriteGT)
+
+    &--tw:before
+      setSprite($footer_icon7_tw, $urlSpriteGT)
+
+    &--ins:before
+      setSprite($footer_icon8_ins, $urlSpriteGT)
+
