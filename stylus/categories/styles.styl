@@ -66,11 +66,13 @@
     position relative
     display block
     //prefs(box-shadow, 0 0 8px 0 rgba(0,0,0,0.5), -ms- -o-)
+
     &:hover
       prefs(box-shadow, 0 0 8px 0 rgba(0,0,0,0.5), -ms- -o-)
 
       .zoo-img
         display block
+        //display none
 
   &__col-lg-2_5
     @media (min-width: 1500px)
@@ -85,6 +87,23 @@
     height 366px
     padding 10px
     overflow hidden
+
+  &__figcaption
+    font-family 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif
+    em(13, 16)
+    color baseBlack
+
+    &-delprice
+      padding-top 20px
+      display block
+      font-size 1.2em
+      text-transform none
+
+    &-price
+      padding 0
+      color inherit
+      font-size 1.5em
+      text-transform none
 
   &__img-wrapper-table
     width 100%

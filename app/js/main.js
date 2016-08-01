@@ -1,6 +1,8 @@
 jQuery(function ($) {
 
-	var APP_GT = {
+	var APP_GT = APP_GT || {};
+
+	APP_GT = {
 		replaceCartNode: function () {
 
 			var query = Modernizr.mq('(max-width: 991px)');
