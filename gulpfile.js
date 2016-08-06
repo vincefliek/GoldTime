@@ -266,9 +266,7 @@ var gulp = require('gulp'),
       paths.bs_variables + 'variables.less'
     ];
 
-    gulp.watch( files[0], ['styl'] );
-    gulp.watch( files[1], ['styl'] );
-    gulp.watch( files[2], ['styl'] );
+    gulp.watch( files[0] || files[1] || files[2], ['styl'] );
     gulp.watch( files[3], ['updateBS'] );
   });
 
@@ -293,7 +291,7 @@ var gulp = require('gulp'),
       .pipe(webserver({
         livereload: true,
         directoryListing: true,
-        open: 'http://localhost:8000/app/category.html'
+        open: 'http://localhost:8000/app/product.html'
       }));
   });
 

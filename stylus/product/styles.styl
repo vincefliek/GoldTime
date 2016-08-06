@@ -1,0 +1,77 @@
+/*!----------------------------------------
+ *  Page categories
+ *----------------------------------------*/
+
+/*! ============ smth ============ */
+
+.PARTIC-PRODUCT
+  position relative
+  padding 10px
+  rem(16)
+
+  //@media (min-width: 768px)
+  //  rem(16)
+  //@media (min-width: 992px)
+  //  rem(14)
+  //@media (min-width: 1200px)
+  //  rem(16)
+  //@media (min-width: 1500px)
+  //  rem(18)
+
+.product-content
+  &__h4-like
+    color baseBlack
+    em(28, 16, 1)
+    font-weight 400
+    text-transform none
+
+  &__delprice
+    padding-top: 20px;
+    padding-bottom: 2px;
+    display: block;
+    font-size: .95em;
+    text-transform: none;
+
+  &__price
+    display inline-block
+    padding: 0;
+    color: inherit;
+    font-size: 2em;
+    text-transform: none;
+
+  &__presence
+    width auto
+    float right
+
+  &__btn-in-cart
+    margin-top unitEM(30, 16)
+    padding 1em 2em
+    em(14, 16, 1)
+    color baseBlack
+    font-weight 600
+    background-color saturate(#e4b24f, 30%)
+    text-transform uppercase
+
+  &__btn-in-gift
+    margin-top unitEM(30, 16)
+    padding 1em 1.7em
+    em(14, 16, 1)
+    color baseBlack
+    font-weight 600
+    background-color #f4f4f4
+    text-transform uppercase
+
+    > p
+      position relative
+      padding-left 28px
+
+      &:before
+        content ''
+        position absolute
+        top -6px
+        left 0
+        background url("../img/productpage_gift.png") no-repeat center
+        background-size contain
+        display block
+        width 24px
+        height 24px
