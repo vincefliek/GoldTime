@@ -98,17 +98,9 @@ var gulp = require('gulp'),
 
 /////////////////////////////////////////////////////////////////////////////////////
 //
-// replace twitter bootstrap to the app folder
+// replace twitter bootstrap from bower components to the app folder
 //
 /////////////////////////////////////////////////////////////////////////////////////
-
-  gulp.task('bs:js', function() {
-    return gulp
-      .src([
-        paths.bower + 'bootstrap/dist/js/*min.js'
-      ])
-      .pipe(gulp.dest( paths.js + 'bower_vendors/' ));
-  });
 
   gulp.task('bs:css', function() {
     return gulp
@@ -128,21 +120,7 @@ var gulp = require('gulp'),
 
 /////////////////////////////////////////////////////////////////////////////////////
 //
-// replace jquery to the app folder
-//
-/////////////////////////////////////////////////////////////////////////////////////
-
-  gulp.task('jquery', function() {
-    return gulp
-      .src([
-        paths.bower + 'jquery/dist/jquery.min.js'
-      ])
-      .pipe(gulp.dest( paths.js + 'bower_vendors/' ));
-  });
-
-/////////////////////////////////////////////////////////////////////////////////////
-//
-// replace modernizr to the app folder
+// replace modernizr from bower components to the app folder
 //
 /////////////////////////////////////////////////////////////////////////////////////
 
@@ -159,38 +137,29 @@ var gulp = require('gulp'),
 
 /////////////////////////////////////////////////////////////////////////////////////
 //
-// replace zoomove to the app folder
+// replace bower components to the app folder
 //
 /////////////////////////////////////////////////////////////////////////////////////
 
-  gulp.task('zoomove:css', function() {
+  gulp.task('bwr_comp:css', function() {
     return gulp
       .src([
-        paths.bower + 'zoomove/dist/zoomove.min.css'
-      ])
-      .pipe(gulp.dest( paths.css ));
-  });
-
-  gulp.task('zoomove:js', ['zoomove:css'], function() {
-    return gulp
-      .src([
-        paths.bower + 'zoomove/dist/zoomove.min.js'
-      ])
-      .pipe(gulp.dest( paths.js + 'bower_vendors/' ));
-  });
-
-/////////////////////////////////////////////////////////////////////////////////////
-//
-// replace normalize.css to the app folder
-//
-/////////////////////////////////////////////////////////////////////////////////////
-
-  gulp.task('normalize-css', function() {
-    return gulp
-      .src([
+        paths.bower + 'zoomove/dist/zoomove.min.css',
+        paths.bower + 'flickity/dist/flickity.min.css',
         paths.bower + 'normalize-css/normalize.css'
       ])
       .pipe(gulp.dest( paths.css ));
+  });
+
+  gulp.task('bwr_comp:js', ['bwr_comp:css'], function() {
+    return gulp
+      .src([
+        paths.bower + 'zoomove/dist/zoomove.min.js',
+        paths.bower + 'flickity/dist/flickity.pkgd.min.js',
+        paths.bower + 'jquery/dist/jquery.min.js',
+        paths.bower + 'bootstrap/dist/js/*min.js'
+      ])
+      .pipe(gulp.dest( paths.js + 'bower_vendors/' ));
   });
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -307,13 +276,10 @@ var gulp = require('gulp'),
       'mainBowerFiles',
       'bs:prepareLess',
       'bs:compileLess',
-      'bs:js',
       'bs:css',
       'bs:fonts',
-      'jquery',
       'modernizr',
-      'zoomove:js',
-      'normalize-css',
+      'bwr_comp:js',
       'sprite',
       'styl',
       'webserver',

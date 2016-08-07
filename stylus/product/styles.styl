@@ -4,10 +4,38 @@
 
 /*! ============ smth ============ */
 
+.tg  {
+  width 100%
+  em(14, 14, 1)
+  border-collapse:collapse;
+  border-spacing:0;
+}
+.tg tbody > tr:nth-child(2n-1) {
+  background-color #f9f9f9
+}
+.tg td{
+  padding:10px 10px;
+  overflow:hidden;
+  word-break:normal;
+}
+.tg td:first-child {
+  color: #919191;
+}
+.tg th{
+  font-weight:normal;
+  padding:10px 10px;
+  overflow:hidden;
+  word-break:normal;
+}
+.tg .tg-yw4l{
+  vertical-align:top;
+}
+
 .PARTIC-PRODUCT
   position relative
-  padding 10px
-  rem(16)
+  padding 0 0 50px
+  rem(14)
+  border-bottom 1px solid #8c8c8a
 
   //@media (min-width: 768px)
   //  rem(16)
@@ -17,6 +45,12 @@
   //  rem(16)
   //@media (min-width: 1500px)
   //  rem(18)
+
+  &__aside
+    padding 10px 0
+    em(14, 14)
+    font-weight 400
+    color #989898
 
 .product-content
   &__h4-like
@@ -33,6 +67,7 @@
     text-transform: none;
 
   &__price
+    margin-bottom unitEM(8, 16)
     display inline-block
     padding: 0;
     color: inherit;
@@ -40,11 +75,14 @@
     text-transform: none;
 
   &__presence
+    margin-bottom unitEM(8, 16)
     width auto
-    float right
+    @media (min-width: 768px)
+      float right
 
   &__btn-in-cart
-    margin-top unitEM(30, 16)
+    margin-bottom 5px
+    margin-top unitEM(20, 16)
     padding 1em 2em
     em(14, 16, 1)
     color baseBlack
@@ -53,7 +91,8 @@
     text-transform uppercase
 
   &__btn-in-gift
-    margin-top unitEM(30, 16)
+    margin-bottom 5px
+    margin-top unitEM(20, 16)
     padding 1em 1.7em
     em(14, 16, 1)
     color baseBlack
@@ -75,3 +114,45 @@
         display block
         width 24px
         height 24px
+
+  &__advice
+    margin-top 10px
+    em(14, 16, 1)
+    color: #919191;
+
+  &__print-page
+    em(14, 16, 1)
+    color: #337ab7;
+    font-weight 600
+    text-decoration underline !important
+
+  &__table-h5
+    margin 20px 0 5px
+    em(16, 14, 1)
+    color: baseBlack
+    font-weight 600
+
+.product-aside
+  &__h5
+    padding 20px 0 5px
+    color: lighten(baseBlack, 40%)
+    font-weight 600
+
+  &__list
+    li:before
+      content '\2013'
+      padding-right 5px
+
+.SIMIL-PRODS
+  position relative
+  padding 50px 0
+  rem(14)
+
+  //@media (min-width: 768px)
+  //  rem(16)
+  //@media (min-width: 992px)
+  //  rem(14)
+  //@media (min-width: 1200px)
+  //  rem(16)
+  //@media (min-width: 1500px)
+  //  rem(18)

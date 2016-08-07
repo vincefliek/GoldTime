@@ -30,9 +30,11 @@
 
     <!-- Bootstrap.css -->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-    <!-- Normalize.css -->
-    <link rel="stylesheet" href="css/zoomove.min.css">
     <!-- ZooMove CSS minified -->
+    <link rel="stylesheet" href="css/zoomove.min.css">
+    <!-- flickity CSS minified -->
+    <link rel="stylesheet" href="css/flickity.min.css">
+    <!-- Normalize.css -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Custom css styles -->
     <link rel="stylesheet" href="css/styles.css">
@@ -365,7 +367,7 @@
                                     <select name="" id="" class="form-control product-content__presence">
                                         <option value="0">Наличие в магазинах</option>
                                         <option value="1">Есть в наличии</option>
-                                        <option value="2">Нету в наличии</option>
+                                        <option value="2">Нет в наличии</option>
                                     </select>
                                 </div>
                                 <a href="#" class="btn product-content__btn-in-cart">
@@ -376,15 +378,67 @@
                                         получить в подарок
                                     </p>
                                 </a>
+                                <p class="product-content__advice">Хотите посоветоваться с близкими?</p>
+                                <a href="#" class="product-content__print-page">Распечатать страничку</a>
+                                <h5 class="product-content__table-h5">Характеристики товара</h5>
+                                <table class="tg">
+                                    <tbody>
+                                        <tr>
+                                            <td class="tg-yw4l">Для кого</td>
+                                            <td class="tg-yw4l">Для женщин</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tg-yw4l">Вставка</td>
+                                            <td class="tg-yw4l">Фианит  (16 шт.), Изумруд (синтетический)  (1 шт.)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tg-yw4l">Металл</td>
+                                            <td class="tg-yw4l">Золото желтое 525 пробы, золото белое 525 пробы</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tg-yw4l">Форма вставки</td>
+                                            <td class="tg-yw4l">Круг, овал</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                            <aside class="PARTIC-PRODUCT__aside product-aside">
+                                Серьги из красного золота 585 пробы с фианитами, выполненные в форме небольших полевых цветочков – это лучший выбор для повседневного образа. Серьги прекрасно дополнят наряды молодой девушки и юной девочки. Золотые серьги с фианитами, преподнесенные в качестве подарка, порадуют каждую представительницу прекрасного пола.
+                                <h5 class="product-aside__h5">Оплата</h5>
+                                <ul class="product-aside__list">
+                                    <li>Наличными при получении</li>
+                                    <li>Оплата платежной картой VISA/Mastercard</li>
+                                </ul>
+                                <h5 class="product-aside__h5">Обмен/Возврат</h5>
+                                <ul class="product-aside__list">
+                                    <li>14 дней со дня покупки</li>
+                                    <li>Гарантия 3 года</li>
+                                </ul>
+                            </aside>
+                        </div>
                     </div>
                 </div> <!-- /.PARTIC-PRODUCT -->
             </div> <!-- /.container-padding -->
         </div> <!-- /.OUTER-PARTIC-PRODUCT -->
 
         <!-- ______ end PARTIC-PRODUCT ______ -->
+
+        <!-- ______ SIMIL-PRODS ______ -->
+
+        <div class="container-fluid paddings-off OUTER-SIMIL-PRODS">
+            <div class="container-padding">
+                <div class="SIMIL-PRODS">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8"></div>
+                        <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2"></div>
+                    </div>
+                </div> <!-- /.SIMIL-PRODS -->
+            </div> <!-- /.container-padding -->
+        </div> <!-- /.OUTER-SIMIL-PRODS -->
+
+        <!-- ______ end SIMIL-PRODS ______ -->
 
     </main> <!-- /.main-container -->
     <!-- ===================== END MAIN CONTENT ========================= -->
@@ -457,6 +511,8 @@
     <script src="js/bower_vendors/bootstrap.min.js"></script>
     <!-- zoomove.js -->
     <script src="js/bower_vendors/zoomove.min.js"></script>
+    <!-- flickity.js -->
+    <script src="js/bower_vendors/flickity.pkgd.min.js"></script>
     <!-- polyfill for 'rem' units -->
     <!--[if lt IE 9]>
     <script src="js/vendors/rem.js"></script>

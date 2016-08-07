@@ -7,7 +7,8 @@
     "jquery": "~1.12.4",
     "normalize-css": "^4.1.1",
     "modernizr": "^3.3.1",
-    "zoomove": "^1.2.0"
+    "zoomove": "^1.2.0",
+    "flickity": "^1.2"
   },
   "overrides": {
     "bootstrap": {
@@ -16,7 +17,8 @@
         "less/mixins/*",
         "dist/fonts/*",
         "dist/js/*"
-      ]
+      ],
+      "dependencies": null
     },
     "jquery": {
       "main": [
@@ -32,6 +34,12 @@
       "main": [
         "normalize.css"
       ]
+    },
+    "flickity": {
+      "main": [
+        "dist/*"
+      ],
+      "dependencies": null
     }
   }
 }
