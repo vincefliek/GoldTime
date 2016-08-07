@@ -156,3 +156,42 @@
   //  rem(16)
   //@media (min-width: 1500px)
   //  rem(18)
+
+  &__left-col
+    @media (min-width: 768px)
+      border-right 1px solid #8c8c8a
+
+  &__h4
+    em(24, 14)
+    color baseBlack
+    text-transform none
+
+  &__item
+    margin 10px
+
+  &__figure
+    width 220px
+    height: 300px;
+
+  &__img-wrapper-table
+    height 180px
+
+  &__other-categ
+    li
+      &:before
+        content '\25B6'
+        color #969696
+        font-size 17px
+        padding-right 5px
+
+    em(16, 14)
+
+.flickity-prev-next-button
+  top -40px
+  width 30px
+  height 30px
+  transform none
+
+  &.previous
+    left auto
+    right (10+@width)px

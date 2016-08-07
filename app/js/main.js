@@ -69,6 +69,13 @@ jQuery(function ($) {
 			// mouseover image zoom in categories page
 			$(".zoo-item").ZooMove();
 
+			// flickity carousel
+			$('.SIMIL-PRODS__carousel').flickity({
+				pageDots: false,
+				cellAlign: 'left',
+				contain: true
+			});
+
 		}
 	};
 
