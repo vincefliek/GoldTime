@@ -1,16 +1,103 @@
 /*!----------------------------------------
  *  Page cart
  *----------------------------------------*/
+.CART {
+  //padding 0 0 50px
+}
+
 /*! ============ products in cart ============ */
 .CART-PRODUCTS {
   position relative
-  padding 0 0 50px
+  margin-bottom 50px
   rem(14)
+  background-color #f4f4f4
+
+  &__wrapper-padding {
+    padding 20px
+  }
+
+  &__heading {
+    margin-bottom 20px
+    color baseBlack
+    em(18, 14)
+    font-weight 600
+    text-transform uppercase
+  }
+
+  &__amount {
+    margin-bottom 15px
+    color baseBlack
+    font-weight 600
+    &-num {
+      &:before {
+        content '('
+      }
+      &:after {
+        content ')'
+      }
+    }
+  }
+
+  &__list {
+    &-item {
+      position relative
+      margin-bottom 25px
+      display block
+    }
+    & .PRODUCTS__img-wrapper-table {
+      height 120px
+      background-color #fff
+      border 0
+    }
+    & .PRODUCTS__figcaption-number {
+      margin-bottom 10px
+    }
+    & .PRODUCTS__figcaption-delprice {
+      margin 2px 0
+      padding 0
+      em(13, 14, 1)
+      font-family 'Open Sans', Arial, sans-serif
+    }
+    & .PRODUCTS__figcaption-price {
+      margin 10px 0
+      color #adadad
+    }
+  }
+
+  &__product {
+    &-remove {
+      z-index 99
+      position absolute
+      top 0
+      right 0
+      &:hover {
+        color lighten(red, 30%)
+        font-weight 700
+        cursor pointer
+      }
+    }
+    &-price {
+      color baseBlack
+    }
+  }
+
+  &__total {
+    padding 15px 5px
+    color baseBlack
+    background-color #ccc
+    text-align center
+  }
 }
 
 /*! ============ order form ============ */
-.CART-PRODUCTS {
+.CART-ORDER {
   position relative
-  //padding 0 0 50px
+  margin-bottom 50px
   rem(14)
+
+  &__heading {
+    margin-bottom 30px
+    em(26, 14)
+    color baseBlack
+  }
 }

@@ -56,10 +56,13 @@ jQuery(function ($) {
 		},
 		insertStylesInHead: function (calback) {
 
+			if ( $('#headStyles') ) $('#headStyles').remove();
+
 			var stElem = document.createElement('style'),
 					head = document.head || document.getElementsByTagName('head')[0];
 
 			stElem.type = 'text/css';
+			stElem.setAttribute('id', 'headStyles');
 
 			if (stElem.styleSheet) {
 				stElem.styleSheet.cssText = calback();
@@ -71,6 +74,9 @@ jQuery(function ($) {
 
 		},
 		init: function () {
+
+			var _this = this,
+					footerH = $('.footer-container').outerHeight(true);
 
 			// cart node
 			this.replaceCartNode();
@@ -93,9 +99,14 @@ jQuery(function ($) {
 			});
 
 			this.insertStylesInHead(function () {
-				// footer stick to bottom
-				var footerH = $('.footer-container').outerHeight(true);
 				return 'body{padding-bottom:' + footerH + 'px;}';
+			});
+
+			$( window ).resize(function () {
+				footerH = $('.footer-container').outerHeight(true);
+				_this.insertStylesInHead(function () {
+					return 'body{padding-bottom:' + footerH + 'px;}';
+				});
 			});
 
 		}
