@@ -260,7 +260,7 @@ var gulp = require('gulp'),
       .pipe(webserver({
         livereload: true,
         directoryListing: true,
-        open: 'http://localhost:8000/app/product.html'
+        open: 'http://localhost:8000/app/cart.html'
       }));
   });
 

@@ -54,6 +54,22 @@ jQuery(function ($) {
 			});
 
 		},
+		insertStylesInHead: function (calback) {
+
+			var stElem = document.createElement('style'),
+					head = document.head || document.getElementsByTagName('head')[0];
+
+			stElem.type = 'text/css';
+
+			if (stElem.styleSheet) {
+				stElem.styleSheet.cssText = calback();
+			} else {
+				stElem.appendChild(document.createTextNode( calback() ));
+			}
+
+			head.appendChild( stElem );
+
+		},
 		init: function () {
 
 			// cart node
@@ -74,6 +90,12 @@ jQuery(function ($) {
 				pageDots: false,
 				cellAlign: 'left',
 				contain: true
+			});
+
+			this.insertStylesInHead(function () {
+				// footer stick to bottom
+				var footerH = $('.footer-container').outerHeight(true);
+				return 'body{padding-bottom:' + footerH + 'px;}';
 			});
 
 		}
