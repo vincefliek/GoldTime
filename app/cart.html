@@ -458,9 +458,68 @@
                                 <h2 class="CART-ORDER__heading h4-like">оформление заказа</h2>
                                 <div class="row">
                                     <div class="col-xs-10 col-sm-7 col-md-7 col-lg-7">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dignissimos, explicabo in laudantium magnam perferendis repellat? In minima officiis sint unde. Accusamus commodi deleniti est labore, praesentium quam qui velit? Aut officiis totam vitae? Ad aliquid cumque doloribus ducimus ea eos fuga fugit harum illo ipsa labore magnam magni maxime nisi nobis odio, omnis quaerat quo sequi, sunt tenetur vel velit veritatis. Aspernatur cupiditate dolor error facilis molestiae nihil nobis sint ullam velit veniam? Accusantium alias blanditiis consectetur corporis dolore esse eveniet fuga harum id illo iusto labore, laudantium libero magnam nobis placeat quaerat quas repudiandae similique sint velit veniam voluptatem voluptates. Ab aliquid aperiam aspernatur atque beatae, cum dolorem error explicabo fuga, fugit ipsum itaque iusto magnam maiores nesciunt, non pariatur possimus praesentium quisquam quo reiciendis rem repellendus totam veritatis vitae voluptatem voluptatum. Accusantium asperiores atque consequatur cum earum enim esse est eveniet iste laboriosam maxime minus, nisi nobis nostrum optio pariatur perspiciatis praesentium quae quidem quod sed soluta, suscipit tempora? Consequuntur, dolore incidunt iusto maiores nam pariatur veritatis. Amet autem dolorum eius exercitationem, iusto laudantium officia quae quam, qui quia repellendus sed soluta tempora ullam ut voluptatem voluptatum. Asperiores distinctio fugiat impedit laborum molestias odit quas quos repellat.
+                                        <div class="CART-ORDER__table">
+                                            <div class="form-group CART-ORDER__table-row">
+                                                <label for="cartOrderTel" class="CART-ORDER__table-cell CART-ORDER__label">Телефон</label>
+                                                <input type="text" class="form-control CART-ORDER__input CART-ORDER__table-cell" id="cartOrderTel">
+                                            </div>
+                                            <div class="form-group CART-ORDER__table-row">
+                                                <label for="cartOrderName" class="CART-ORDER__table-cell CART-ORDER__label">Имя</label>
+                                                <input type="text" class="form-control CART-ORDER__input CART-ORDER__table-cell" id="cartOrderName">
+                                            </div>
+                                            <div class="form-group CART-ORDER__table-row">
+                                                <label for="cartOrderSurname" class="CART-ORDER__table-cell CART-ORDER__label">Фамилия</label>
+                                                <input type="text" class="form-control CART-ORDER__input CART-ORDER__table-cell" id="cartOrderSurname">
+                                            </div>
+                                            <div class="form-group CART-ORDER__table-row">
+                                                <label for="cartOrderEmail" class="CART-ORDER__table-cell CART-ORDER__label">Email</label>
+                                                <input type="text" class="form-control CART-ORDER__input CART-ORDER__table-cell" id="cartOrderEmail">
+                                            </div>
+                                        </div>
+                                        <p class="CART-ORDER__heading-2">Доставка</p>
+                                        <p class="CART-ORDER__heading-3">Выберите способ доставки</p>
+                                        <div class="CART-ORDER__table CART-ORDER__table--2">
+                                            <div class="form-group CART-ORDER__table-row">
+                                                <label for="cartOrderIndex" class="CART-ORDER__table-cell CART-ORDER__label">Индекс</label>
+                                                <input type="text" class="form-control CART-ORDER__input CART-ORDER__table-cell" id="cartOrderIndex">
+                                            </div>
+                                            <div class="form-group CART-ORDER__table-row">
+                                                <label for="cartOrderAddress" class="CART-ORDER__table-cell CART-ORDER__label">Адрес</label>
+                                                <input type="text" class="form-control CART-ORDER__input CART-ORDER__table-cell" id="cartOrderAddress">
+                                            </div>
+                                            <div class="form-group CART-ORDER__table-row">
+                                                <label for="cartOrderMethod" class="CART-ORDER__table-cell CART-ORDER__label">Способ</label>
+                                                <select class="form-control CART-ORDER__input CART-ORDER__table-cell" id="cartOrderMethod">
+                                                    <option value="0">самовывоз из магазина</option>
+                                                    <option value="1">самовывоз из магазина</option>
+                                                    <option value="2">самовывоз из магазина</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <p class="CART-ORDER__heading-2">Оплата</p>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="cartOrderRadioCash" value="option1" checked>
+                                                Наличными при получении
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="cartOrderRadioCard" value="option2">
+                                                Оплата платежной картой VISA/Mastercard
+                                            </label>
+                                        </div>
+                                        <a href="#" class="product-content__print-page">Комментарий к заказу</a>
+                                        <div class="CART-ORDER__btn-order">
+                                            <a href="#" class="btn product-content__btn-in-cart">
+                                                заказать
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="col-xs-10 col-sm-3 col-md-3 col-lg-3"></div>
+                                    <div class="col-xs-10 col-sm-3 col-md-3 col-lg-3">
+                                        <p class="product-content__advice">Покупали у нас товары раньше?</p>
+                                        <a href="#" class="product-content__print-page">Войти и продолжить</a>
+                                    </div>
                                 </div>
                             </form>
 
