@@ -88,9 +88,6 @@ jQuery(function ($) {
 			// sidebar toggler
 			this.toggleSidebar();
 
-			// mouseover image zoom in categories page
-			$(".zoo-item").ZooMove();
-
 			// flickity carousel
 			$('.SIMIL-PRODS__carousel').flickity({
 				pageDots: false,
@@ -108,6 +105,11 @@ jQuery(function ($) {
 					return 'body{padding-bottom:' + footerH + 'px;}';
 				});
 			});
+
+			// mouseover image zoom in categories page
+			if ( $(".zoo-item") ) {
+				$(".zoo-item").ZooMove();
+			}
 
 		}
 	};
